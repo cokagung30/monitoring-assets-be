@@ -1,15 +1,14 @@
 {
-   "version": 2,
-   "builds": [
-    {
-        "src": "./main.js",
-        "use": "@vercel/node"
+    "version": 2,
+    "functions": {
+        "src/main.ts": {
+            "maxDuration": 30
+        }
+    },
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/src/main.ts" }
+    ],
+    "env": {
+        "NODE_ENV": "production"
     }
-   ],
-   "routes": [
-    {
-        "src": "/(.*)",
-        "dest": "/"
-    }
-   ]
 }
