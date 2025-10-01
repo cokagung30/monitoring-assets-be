@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "outputDirectory": "dist",
     "builds": [
         { 
             "src": "src/main.ts", 
@@ -16,5 +15,6 @@
                 "Access-Control-Allow-Origin": "*"
             }
         }
-    ]
+    ],
+    "outputDirectory": "dist"
 }
